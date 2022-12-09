@@ -4,7 +4,7 @@ package ads;
 import java.util.Collection;
 import java.util.HashSet;
 
-class Friend {
+class Friend implements Comparable<Friend> {
 
     private final String name; // unique
     private final FriendList list;
@@ -29,6 +29,11 @@ class Friend {
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Friend that) {
+        return this.name.compareTo(that.name);
     }
 
 }

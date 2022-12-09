@@ -4,6 +4,8 @@ package ads;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
 
 class FriendList {
 
@@ -17,8 +19,8 @@ class FriendList {
     private final Map<String, Set<Friend>> friendsByHobby;
 
     public FriendList() {
-        friendsByName = null;
-        friendsByHobby = null;
+        friendsByName = new TreeMap<>();
+        friendsByHobby = new TreeMap<>();
     }
 
     void add(String name) {
@@ -34,47 +36,41 @@ class FriendList {
     }
 
     Friend getByName(String name) {
-        return null;
+        return friendsByName.get(name);
     }
 
     /**
-     * add a friend to the list of friends for that hobby
+     * add a friend to the list of friends for that bobby
      *
      * @param hobby
      * @param friend
      */
     void addHobbyFriend(String hobby, Friend friend) {
-
+        Set<Friend> set;
+        if (friendsByHobby.containsKey(hobby)) {
+            set = friendsByHobby.get(hobby);
+        } else {
+            set = new TreeSet<>();
+            friendsByHobby.put(hobby, set);
+        }
+        set.add(friend);
     }
 
     void printByName() {
         System.out.println("\nMy friends:");
+
         for (Friend friend : friendsByName.values()) {
             System.out.println("   " + friend);
         }
     }
+
     void printByHobby() {
-        Set<Friend> list;
-        list = friendsByHobby.get("guitar");
-        if (list != null) {
-            System.out.println("\nMy guitar friends:");
-            for (Friend friend : list) {
-                System.out.println("   " + friend);
-            }
-        }
-        list = friendsByHobby.get("snowboarding");
-        if (list != null) {
-            System.out.println("\nMy snowboarding friends:");
-            for (Friend friend : list) {
-                System.out.println("   " + friend);
-            }
-        }
-        list = friendsByHobby.get("travelling");
-        if (list != null) {
-            System.out.println("\nMy travelling friends:");
-            for (Friend friend : list) {
+        for (Entry<String, Set<Friend>> list : friendsByHobby.entrySet()) {
+            System.out.println("\nMy " + list.getKey() + " friends:");
+            for (Friend friend : list.getValue()) {
                 System.out.println("   " + friend);
             }
         }
     }
+
 }

@@ -1,10 +1,10 @@
 // Frans Spijkerman, Avans Hogeschool 2020
-package ads;
+package dummy;
 
 import java.util.Collection;
 import java.util.HashSet;
 
-class Friend implements Comparable<Friend> {
+class Friend {
 
     private final String name; // unique
     private final FriendList list;
@@ -29,11 +29,6 @@ class Friend implements Comparable<Friend> {
     @Override
     public String toString() {
         return name;
-    }
-
-    @Override
-    public int compareTo(Friend that) {
-        return this.name.compareTo(that.name);
     }
 
 }

@@ -1,5 +1,5 @@
 // Frans Spijkerman, Avans Hogeschool 2020
-package ads;
+package dummy;
 
 class Friends {
 

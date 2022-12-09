@@ -6,5 +6,10 @@ class FreeElement extends Element {
     public FreeElement(String tag) {
         super(tag);
     }
+    
+    @Override
+    boolean isInTree(Element tree) {
+        return false;
+    }
 
 }
