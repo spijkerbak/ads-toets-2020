@@ -1,62 +1,77 @@
 <!doctype html>
 <html lang="nl">
-    <head>
-        <title>Toets ADS</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        <style>
-            * { 
-				font-family: sans-serif;
-				box-sizing: border-box; 
-			}
-			body {
-				max-width: 780px;
-				margin: auto;
-			}
-			pre {
-				font-family: monospace;
-			}
-			em {
-				color: darkgreen;
-				background-color: yellow;
-				font-style: normal;
-				font-size: smaller;
-				white-space: nowrap;
-			}
-			li {
-				margin-top: 0.3em;
-			}
-			.instruct {
-				font-size: larger;
-			}
-			.instruct li {
-				margin-top: 0.5em;
-			}
-        </style>
-    </head>
-    <body>
-<h1>Toets ADS 4-6-2020</h1>
 
-<h2>Instructies</h2>
-<ul class="instruct">
-<li style="color:red">Werk in de aangeleverde bronbestanden. Lever uiteindelijk <b>alleen de source-code</b> weer in. Dus geen hele projecten.</li>
-<li>Zet de antwoorden op theorievragen in commentaar bij de methode waar de vraag over gaat.</li>
-<li>De opdrachten zijn in Java geschreven. Als je ze wilt uitvoeren in C#, is dat je eigen verantwoordelijkheid.</li>
-<li>Schrijf waar nodig ter verduidelijking commentaar bij je code.</li>
-<li>Kies steeds de meest efficiënte datatypes en algoritmen.</li>
-<li>Zorg dat de uitvoer zoveel mogelijk op de gewenste uitvoer lijkt.</li>
-<li style="color:red">Lever je werk hier uiterlijk om 21:30 uur vanavond in.</li>
-</ul>
+<head>
+   <title>Toets ADS</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link type="text/css" rel="stylesheet" href="style.css">
+   <style>
+      * {
+         font-family: sans-serif;
+         box-sizing: border-box;
+      }
 
-<hr>
+      body {
+         max-width: 780px;
+         margin: auto;
+      }
 
-<h2>Opdracht 1: Dom <em>(45 punten)</em></h2>
+      pre {
+         font-family: monospace;
+      }
 
-<p>De sources voor deze opdracht vind je in Dom.zip. In de klasse Dom hoef je niets te wijzigen, tenzij je stukken code wilt uitschakelen met commentaar.</p>
+      em {
+         color: darkgreen;
+         background-color: yellow;
+         font-style: normal;
+         font-size: smaller;
+         white-space: nowrap;
+      }
 
-<p>De uiteindelijk gewenste uitvoer:</p>
-<pre>
+      li {
+         margin-top: 0.3em;
+      }
+
+      .important {
+         color: red;
+      }
+
+      .instruct {
+         font-size: larger;
+      }
+
+      .instruct li {
+         margin-top: 0.5em;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Toets ADS 4-6-2020</h1>
+
+   <h2>Instructies</h2>
+   <ul class="instruct">
+      <li class="important">Werk in de aangeleverde bronbestanden. Lever uiteindelijk <b>alleen de source-code</b> weer
+         in. Dus geen hele projecten.</li>
+      <li>Zet de antwoorden op theorievragen in commentaar bij de methode waar de vraag over gaat.</li>
+      <li>De opdrachten zijn in Java geschreven. Als je ze wilt uitvoeren in C#, is dat je eigen verantwoordelijkheid.
+      </li>
+      <li>Schrijf waar nodig ter verduidelijking commentaar bij je code.</li>
+      <li>Kies steeds de meest efficiënte datatypes en algoritmen.</li>
+      <li>Zorg dat de uitvoer zoveel mogelijk op de gewenste uitvoer lijkt.</li>
+      <li class="important">Lever je werk hier uiterlijk om 21:30 uur vanavond in.</li>
+   </ul>
+
+   <hr>
+
+   <h2>Opdracht 1: Dom <em>(45 punten)</em></h2>
+
+   <p>De sources voor deze opdracht vind je in Dom.zip. In de klasse Dom hoef je niets te wijzigen, tenzij je stukken
+      code wilt uitschakelen met commentaar.</p>
+
+   <p>De uiteindelijk gewenste uitvoer:</p>
+   <pre>
 node 'title' is already in tree
 
 html
@@ -77,43 +92,45 @@ html
 tree depth = 4
 </pre>
 
-<p>De hoofdboom is hier het Element elemHtml.</p>
+   <p>De hoofdboom is hier het Element elemHtml.</p>
 
-<h3>Stap 1.1</h3>
-<ul>
-<li>Zorg dat een Element (zoals &lt;title&gt;) maar één keer in een boom kan voorkomen.
-<li>Maak daarvoor de methode isInTree in de klasse Element werkend. <em>(15 punten)</em>
-<li>Dit wordt (natuurlijk) een recursieve methode.
-<li>Wat is de efficiëntie in tijd en geheugengebruik van deze methode? Verklaar. <em>(5 punten)</em>
-</ul>
+   <h3>Stap 1.1</h3>
+   <ul>
+      <li>Zorg dat een Element (zoals &lt;title&gt;) maar één keer in een boom kan voorkomen.
+      <li>Maak daarvoor de methode isInTree in de klasse Element werkend. <em>(15 punten)</em>
+      <li>Dit wordt (natuurlijk) een recursieve methode.
+      <li>Wat is de efficiëntie in tijd en geheugengebruik van deze methode? Verklaar. <em>(5 punten)</em>
+   </ul>
 
-<h3>Stap 1.2</h3>
-<ul>
-<li>Zorg dat een FreeElement (zoals &lt;h1&gt; of &lt;p&gt;) wel vaker in een boom kan voorkomen.
-<li>Pas daarvoor alleen de subklasse FreeElement aan. <em>(10 punten)</em>
-</ul>
+   <h3>Stap 1.2</h3>
+   <ul>
+      <li>Zorg dat een FreeElement (zoals &lt;h1&gt; of &lt;p&gt;) wel vaker in een boom kan voorkomen.
+      <li>Pas daarvoor alleen de subklasse FreeElement aan. <em>(10 punten)</em>
+   </ul>
 
-<h3>Stap 1.3</h3>
-<ul>
-<li>Schrijf de methode getDepth() om de diepte van een boom te bepalen. <em>(10 punten)</em>
-<li>Wat is de efficiëntie in tijd en geheugengebruik van deze methode? Verklaar. <em>(5 punten)</em>
-</ul>
+   <h3>Stap 1.3</h3>
+   <ul>
+      <li>Schrijf de methode getDepth() om de diepte van een boom te bepalen. <em>(10 punten)</em>
+      <li>Wat is de efficiëntie in tijd en geheugengebruik van deze methode? Verklaar. <em>(5 punten)</em>
+   </ul>
 
-<hr>
+   <hr>
 
-<h2>Opdracht 2: Friends <em>(55 punten)</em></h2>
+   <h2>Opdracht 2: Friends <em>(55 punten)</em></h2>
 
-<p>De sources voor deze opdracht vind je in Friends.zip. In de klasse Friends hoef je niets te wijzigen, tenzij je stukken code wilt uitschakelen met commentaar.</p>
+   <p>De sources voor deze opdracht vind je in Friends.zip. In de klasse Friends hoef je niets te wijzigen, tenzij je
+      stukken code wilt uitschakelen met commentaar.</p>
 
-<p>De klasse FriendList bevat twee collecties:</p>
-<ul>
-<li>friendsByName is een Map van vrienden, met als sleutel de naam van de vriend. 
-<li>friendsByHobby is wat lastiger: een Map van Sets met als doel om per hobby een subset van de vrienden te kunnen opslaan
-</ul>
+   <p>De klasse FriendList bevat twee collecties:</p>
+   <ul>
+      <li>friendsByName is een Map van vrienden, met als sleutel de naam van de vriend.
+      <li>friendsByHobby is wat lastiger: een Map van Sets met als doel om per hobby een subset van de vrienden te
+         kunnen opslaan
+   </ul>
 
-<p>De uiteindelijk gewenste uitvoer:</p>
+   <p>De uiteindelijk gewenste uitvoer:</p>
 
-<pre>
+   <pre>
 My friends:
    Goofy Geef
    Michelle Dekker
@@ -146,37 +163,40 @@ My travelling friends:
    Rick Sanchez
 </pre>
 
-<h3>Stap 2.1</h3>
-<ul>
-<li>Initialiseer in de constructor van FriendList de twee Maps met geschikte implementaties. <em>(10 punten)</em>
-<li>Je keuze moet er voor zorgen dat de namen altijd alfabetisch gesorteerd worden weergegeven.
-<li>Schrijf in het commentaar de onderbouwing van je keuzes. <em>(5 punten)</em>
-<li>Afhankelijk van je keuzes, moet je wellicht iets toevoegen aan de klasse Friend (kijk goed naar eventuele foutmeldingen).
-</ul>
+   <h3>Stap 2.1</h3>
+   <ul>
+      <li>Initialiseer in de constructor van FriendList de twee Maps met geschikte implementaties. <em>(10 punten)</em>
+      <li>Je keuze moet er voor zorgen dat de namen altijd alfabetisch gesorteerd worden weergegeven.
+      <li>Schrijf in het commentaar de onderbouwing van je keuzes. <em>(5 punten)</em>
+      <li>Afhankelijk van je keuzes, moet je wellicht iets toevoegen aan de klasse Friend (kijk goed naar eventuele
+         foutmeldingen).
+   </ul>
 
-<h3>Stap 2.2</h3>
-<ul>
-<li>Schrijf de methode getByName in FriendList om een vriend op naam te kunnen zoeken. <em>(10 punten)</em>
-<li>Wat is de efficiëntie in tijd en geheugengebruik van deze methode? Verklaar. <em>(5 punten)</em>
-</ul>
+   <h3>Stap 2.2</h3>
+   <ul>
+      <li>Schrijf de methode getByName in FriendList om een vriend op naam te kunnen zoeken. <em>(10 punten)</em>
+      <li>Wat is de efficiëntie in tijd en geheugengebruik van deze methode? Verklaar. <em>(5 punten)</em>
+   </ul>
 
-<h3>Stap 2.3</h3>
-<ul>
-<li>Schrijf de methode addHobbyFriend in FriendList. Deze moet er voor zorgen dat een vriend aan het lijstje voor de betreffende hobby wordt toegevoegd. <em>(15 punten)</em>
-<li>In deze methode kijk je eerst of er al een lijst voor die hobby bestaat, en zo niet maak je die hier aan.
-<li>Aan de bestaande of net gemaakte lijst voeg je dan de vriend toe.
-</ul>
+   <h3>Stap 2.3</h3>
+   <ul>
+      <li>Schrijf de methode addHobbyFriend in FriendList. Deze moet er voor zorgen dat een vriend aan het lijstje voor
+         de betreffende hobby wordt toegevoegd. <em>(15 punten)</em>
+      <li>In deze methode kijk je eerst of er al een lijst voor die hobby bestaat, en zo niet maak je die hier aan.
+      <li>Aan de bestaande of net gemaakte lijst voeg je dan de vriend toe.
+   </ul>
 
-<h3>Stap 2.4</h3>
-<ul>
-<li>Als ik een nieuwe hobby krijg, wil ik de code van FriendList niet steeds aanpassen. Maak daarom de methode printByHobby algemener, zodat er geen hard-coded hobbynamen meer in voorkomen. <em>(10 punten)</em>
-<li>Als het goed is, worden de hobby's alfabetisch gerangschikt weergegeven en de namen daarbinnen ook. 
-</ul>
+   <h3>Stap 2.4</h3>
+   <ul>
+      <li>Als ik een nieuwe hobby krijg, wil ik de code van FriendList niet steeds aanpassen. Maak daarom de methode
+         printByHobby algemener, zodat er geen hard-coded hobbynamen meer in voorkomen. <em>(10 punten)</em>
+      <li>Als het goed is, worden de hobby's alfabetisch gerangschikt weergegeven en de namen daarbinnen ook.
+   </ul>
 
-<hr>
+   <hr>
 
-<h2>Einde...</h2>
+   <h2>Einde...</h2>
 
+</body>
 
-    </body>
 </html>
